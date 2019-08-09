@@ -100,7 +100,11 @@ exports.ease = {
     return c / 2 * (Math.sqrt(1 - (t -= 2) * t) + 1) + b;
   },
   inElastic(t, b, c, d) {
-    let s = 1.70158; let p = 0; let a = c;
+    let s = 1.70158;
+
+    let p = 0;
+
+    let a = c;
 
     if (t === 0) return b; if ((t /= d) === 1) return b + c; if (!p) p = d * 0.3;
     if (a < Math.abs(c)) { a = c; s = p / 4; } else s = p / (2 * Math.PI) * Math.asin(c / a);
@@ -108,7 +112,11 @@ exports.ease = {
     return -(a * (2 ** (10 * (t -= 1))) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
   },
   outElastic(t, b, c, d) {
-    let s = 1.70158; let p = 0; let a = c;
+    let s = 1.70158;
+
+    let p = 0;
+
+    let a = c;
 
     if (t === 0) return b; if ((t /= d) === 1) return b + c; if (!p) p = d * 0.3;
     if (a < Math.abs(c)) { a = c; s = p / 4; } else s = p / (2 * Math.PI) * Math.asin(c / a);
@@ -116,7 +124,11 @@ exports.ease = {
     return a * (2 ** (-10 * t)) * Math.sin((t * d - s) * (2 * Math.PI) / p) + c + b;
   },
   inOutElastic(t, b, c, d) {
-    let s = 1.70158; let p = 0; let a = c;
+    let s = 1.70158;
+
+    let p = 0;
+
+    let a = c;
 
     if (t === 0) return b; if ((t /= d / 2) === 2) return b + c; if (!p) p = d * (0.3 * 1.5);
     if (a < Math.abs(c)) { a = c; s = p / 4; } else s = p / (2 * Math.PI) * Math.asin(c / a);

@@ -18,6 +18,7 @@ function BBDMX(deviceId = '127.0.0.1', options = {}) {
 
 BBDMX.prototype.sendUniverse = function () {
   let channel;
+
   let messageBuffer = Buffer.from(UNIVERSE_LEN.toString());
 
   for (const i = 1; i <= UNIVERSE_LEN; i++) {

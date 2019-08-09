@@ -28,9 +28,13 @@ class Anim {
 
   run(universe, onFinish) {
     let config = {};
+
     let ticks = 0;
+
     let duration = 0;
+
     let animationStep;
+
     let iid = null;
 
     const stack = [ ...this.fxStack ];
